@@ -1,7 +1,7 @@
 const baseUrl = "https://api.themoviedb.org/3"
 const options = {
     method: 'GET', headers: { accept: 'application/json' }, next: {
-        revalidate: 3600 * 24
+        revalidate: 3600 * 24 // 24 hours
     }
 };
 const { TMDB_API_KEY } = process.env
