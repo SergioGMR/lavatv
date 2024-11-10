@@ -14,13 +14,13 @@ const PostCard = ({ movie }: Props) => {
     return (
         <a
             href={`/details/${type}/${movie.id}/${slug}`}
-            className="aspect-9/16 w-64 h-72 rounded-lg overflow-hidden group"
+            className="aspect-2/3 h-64 w-40 md:h-80 md:w-56 rounded-lg overflow-hidden group"
             data-title={movie.title ?? movie.name}
         >
             <div className="relative w-full h-full">
                 <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110"
-                    style={{ backgroundImage: `url(${baseImgPath}${movie.backdrop_path})` }}
+                    style={{ backgroundImage: `url(${baseImgPath}${movie.poster_path})` }}
                 >
                 </div>
                 <div
@@ -28,19 +28,18 @@ const PostCard = ({ movie }: Props) => {
                 >
                 </div>
                 <div
-                    className="absolute inset-0 p-6 flex flex-col justify-end transition-transform duration-300 ease-in-out group-hover:translate-y-2"
+                    className="absolute inset-0 h-full p-4 flex flex-col justify-end transition-transform duration-300 ease-in-out group-hover:translate-y-2"
                 >
                     <h2
-                        className="text-2xl font-bold text-white mb-2"
+                        className="text-lg font-bold text-white"
                     >
                         {movie.title ?? movie.name}
                     </h2>
-                    <p className="text-sm text-gray-300 mb-4">
+                    <p className="text-xs text-slate-200">
                         {releaseDate}
                     </p>
-
                     <div
-                        className="h-1 w-0 bg-yellow-400 transition-all duration-300 ease-in-out group-hover:w-full"
+                        className="h-1 w-0 mt-1 bg-yellow-400 transition-all duration-300 ease-in-out group-hover:w-full rounded-full"
                     >
                     </div>
                 </div>

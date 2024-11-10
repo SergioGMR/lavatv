@@ -8,7 +8,7 @@ const { TMDB_API_KEY } = process.env
 
 const getPopularMovies = async () => {
     const url = new URL(baseUrl)
-    url.pathname = "/3/movie/popular"
+    url.pathname = "/3/trending/movie/week"
     url.searchParams.append('include_adult', 'false')
     url.searchParams.append('language', 'es-ES')
     url.searchParams.append('region', 'es_ES')
@@ -24,7 +24,7 @@ const getPopularMovies = async () => {
 
 const getPopularTvShows = async () => {
     const url = new URL(baseUrl)
-    url.pathname = "/3/tv/popular"
+    url.pathname = "/3/trending/tv/week"
     url.searchParams.append('include_adult', 'false')
     url.searchParams.append('language', 'es-ES')
     url.searchParams.append('region', 'es_ES')
@@ -38,6 +38,6 @@ const getPopularTvShows = async () => {
     return response.json();
 }
 
-const baseImgPath = "https://image.tmdb.org/t/p/w780";
+const baseImgPath = "https://media.themoviedb.org/t/p/w220_and_h330_face";
 
 export { getPopularMovies, getPopularTvShows, baseImgPath };
