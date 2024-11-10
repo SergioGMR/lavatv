@@ -1,18 +1,20 @@
 import { getLocaleDate, slugify } from "@/lib/utils";
 import { baseImgPath } from "@/lib/popular";
 import { Movie } from "@/types/Movie";
+import { Link } from "next-view-transitions";
 
 interface Props {
     movie: Movie;
 }
 
 const PostCard = ({ movie }: Props) => {
-    const releaseDate = getLocaleDate(movie.release_date ?? movie.first_air_date);
+    const date = movie.release_date ?? movie.first_air_date;
+    const releaseDate = getLocaleDate(date);
     const slug = slugify(movie.title ?? movie.name);
     const type = movie.title ? "movie" : "tv";
 
     return (
-        <a
+        <Link
             href={`/details/${type}/${movie.id}/${slug}`}
             className="aspect-2/3 h-72 w-48 md:h-poster md:w-poster rounded-lg overflow-hidden group"
             data-title={movie.title ?? movie.name}
@@ -44,7 +46,7 @@ const PostCard = ({ movie }: Props) => {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
     )
 }
 

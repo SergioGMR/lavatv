@@ -4,7 +4,7 @@ export default function Nav() {
     return (
         <nav
             id="mainmenu"
-            className="flex justify-between mx-12 lg:mx-0 items-center text-white mt-4"
+            className="flex justify-between mx-12 lg:mx-0 items-center text-white mt-4 bg-black/50 px-2 py-1 rounded-lg"
         >
             <div className="flex items-center gap-2">
                 <a className="items-center gap-2" href="/">

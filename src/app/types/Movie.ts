@@ -5,7 +5,7 @@ export type Movie = {
     title: string;
     name: string | null;
     overview: string;
-    release_date: string | null;
-    first_air_date: string | null;
+    release_date: string | undefined;
+    first_air_date: string | undefined;
     vote_average: number;
 }

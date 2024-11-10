@@ -13,7 +13,7 @@ function slugify(input: string): string {
         .replace(/^-+|-+$/g, '');
 }
 
-const getLocaleDate = (date: string | null) => {
+const getLocaleDate = (date: Date | string | undefined) => {
     if (!date) {
         return "Fecha desconocida";
     }

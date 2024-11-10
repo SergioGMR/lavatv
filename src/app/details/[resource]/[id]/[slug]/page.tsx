@@ -4,6 +4,7 @@ import { MovieProfile } from "@/types/MovieDetails";
 import InfoModal from "@/ui/InfoModal";
 import YouTubePlayerWithCarousel from "@/ui/YoutubePlayerWithCarousel";
 import { Video } from "@/types/Youtube";
+import { getLocaleDate } from "@/lib/utils";
 
 export default async function DetailsPage({
     params,
@@ -75,7 +76,7 @@ export default async function DetailsPage({
                                 {
                                     details.first_air_date && (
                                         <p className="flex text-xl text-gray-200 min-h-4">
-                                            {/* {`Primera emisión: ${getLocaleDate(details.first_air_date)}`} */}
+                                            {`Primera emisión: ${getLocaleDate(details.first_air_date)}`}
                                         </p>
                                     )
                                 }

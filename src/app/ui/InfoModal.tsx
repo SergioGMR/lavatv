@@ -2,11 +2,11 @@
 import { InfoModalProps } from "@/types/InfoModal";
 import { useEffect, useState } from "react";
 import { Play, Info, Plus, ThumbsUp } from "lucide-react";
+import { getLocaleDate } from "@/lib/utils";
 export default function InfoModal({ title, date, directorName, castList, genresList, overview }: InfoModalProps) {
     const [open, setOpen] = useState(false);
 
     const toggleModal = () => {
-        console.log("toggleModal");
         setOpen(!open)
     }
 
@@ -50,7 +50,7 @@ export default function InfoModal({ title, date, directorName, castList, genresL
                     </h3>
                     <p className="mt-2">
                         <span className="text-white font-bold mr-2">Año:</span>
-                        {/* {getLocaleDate(details.release_date ?? details.first_air_date)} */}
+                        {getLocaleDate(date)}
                     </p>
                     <p className="mt-2">
                         <span className="text-white font-bold mr-2">Director:</span>
