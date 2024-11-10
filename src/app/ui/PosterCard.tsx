@@ -14,7 +14,7 @@ const PostCard = ({ movie }: Props) => {
     return (
         <a
             href={`/details/${type}/${movie.id}/${slug}`}
-            className="aspect-2/3 h-64 w-40 md:h-80 md:w-56 rounded-lg overflow-hidden group"
+            className="aspect-2/3 h-72 w-48 md:h-poster md:w-poster rounded-lg overflow-hidden group"
             data-title={movie.title ?? movie.name}
         >
             <div className="relative w-full h-full">

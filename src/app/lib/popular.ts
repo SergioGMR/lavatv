@@ -38,6 +38,6 @@ const getPopularTvShows = async () => {
     return response.json();
 }
 
-const baseImgPath = "https://media.themoviedb.org/t/p/w220_and_h330_face";
+const baseImgPath = "https://media.themoviedb.org/t/p/w440_and_h660_face";
 
 export { getPopularMovies, getPopularTvShows, baseImgPath };

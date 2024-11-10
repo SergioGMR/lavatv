@@ -12,6 +12,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      width: {
+        poster: "220px",
+      },
+      height: {
+        poster: "330px",
+      },
     },
   },
   plugins: [],
