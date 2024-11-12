@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react'
 import YouTubePlayer from 'react-player/youtube'
 // import { Maximize, Minimize } from 'lucide-react'
 import { YouTubePlayerWithCarouselProps } from '@/types/Youtube'
+import Image from 'next/image'
 
 const getThumbnailUrl = (videoKey: string) => {
     return `https://img.youtube.com/vi/${videoKey}/mqdefault.jpg`
@@ -93,7 +94,7 @@ const YouTubePlayerWithCarousel: React.FC<YouTubePlayerWithCarouselProps> = ({ v
                                     }`}
                                 onClick={() => handleVideoSelect(video.key)}
                             >
-                                <img
+                                <Image
                                     src={getThumbnailUrl(video.key)}
                                     alt={video.name}
                                     width={160}

@@ -78,9 +78,9 @@ export type Genre = {
 }
 
 export type Images = {
-    backdrops: any[];
-    logos: any[];
-    posters: any[];
+    backdrops: string[];
+    logos: string[];
+    posters: string[];
 }
 
 export type ProductionCompany = {

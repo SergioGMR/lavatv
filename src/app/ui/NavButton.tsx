@@ -1,14 +1,16 @@
+import { Link } from "next-view-transitions";
+
 interface Props {
     text?: string;
-    href?: string;
+    href: string;
     id?: string;
 }
 
 const NavButton = ({ text, href, id }: Props) => {
     return (
-        <a href={href} key={id} className="nav-button px-2 py-1 hover:bg-white/40 hover:rounded">
+        <Link href={href} key={id} className="nav-button px-2 py-1 hover:bg-white/40 hover:rounded">
             {text}
-        </a>
+        </Link>
     );
 };
 
