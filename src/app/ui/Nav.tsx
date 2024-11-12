@@ -1,5 +1,6 @@
 import buttons from "@/data/buttons";
 import NavButton from "@/ui/NavButton";
+import { Link } from "next-view-transitions";
 export default function Nav() {
     return (
         <nav
@@ -7,10 +8,10 @@ export default function Nav() {
             className="flex justify-between mx-12 lg:mx-0 items-center text-white mt-4 bg-black/50 px-2 py-1 rounded-lg"
         >
             <div className="flex items-center gap-2">
-                <a className="items-center gap-2" href="/">
+                <Link className="items-center gap-2" href="/">
                     <span className="text-4xl">LAVA</span>
                     <span className="text-3xl text-red-500">TV</span>
-                </a>
+                </Link>
             </div>
             <div className="block lg:hidden">
                 <button id="menu-button" className="text-white focus:outline-none">
@@ -43,7 +44,6 @@ export default function Nav() {
             <div
                 key={Math.random()}
                 className="hidden lg:flex justify-end items-center gap-x-10">
-
             </div>
         </nav>
     );
